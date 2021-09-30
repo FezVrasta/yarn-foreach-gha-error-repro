@@ -1,0 +1,17 @@
+{
+  "name": "yarn-foreach-gha-error-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://FezVrasta@github.com/FezVrasta/yarn-foreach-gha-error-repro.git",
+  "author": "Federico Zivolo <federico.zivolo@gmail.com>",
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "pkg_a",
+      "pkg_b"
+    ]
+  },
+  "scripts": {
+    "serve": "yarn workspaces foreach -piv --from 'pkg_{a,b}' run serve"
+  }
+}

@@ -1,0 +1,15 @@
+name: Yarn bug repro
+
+on: [workflow_dispatch]
+
+jobs:
+  repro:
+    name: Reproduces error with workspaces foreach on GHA
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn install --immutable --immutable-cache
+      - run: yarn serve

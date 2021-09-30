@@ -1,0 +1,9 @@
+{
+  "name": "pkg_a",
+  "scripts": {
+    "serve": "serve . -p 5001"
+  },
+  "dependencies": {
+    "serve": "^12.0.1"
+  }
+}
